@@ -8,6 +8,10 @@
 import XCTest
 @testable import Forecast
 
+let mockData = """
+{"response":{"header":{"resultCode":"00","resultMsg":"NORMAL_SERVICE"},"body":{"dataType":"JSON","items":{"item":[{"baseDate":"20220212","baseTime":"0500","category":"TMP","fcstDate":"20220212","fcstTime":"0600","fcstValue":"-9","nx":55,"ny":127},{"baseDate":"20220212","baseTime":"0500","category":"UUU","fcstDate":"20220212","fcstTime":"0600","fcstValue":"2.1","nx":55,"ny":127},{"baseDate":"20220212","baseTime":"0500","category":"VVV","fcstDate":"20220212","fcstTime":"0600","fcstValue":"-2.7","nx":55,"ny":127},{"baseDate":"20220212","baseTime":"0500","category":"VEC","fcstDate":"20220212","fcstTime":"0600","fcstValue":"322","nx":55,"ny":127},{"baseDate":"20220212","baseTime":"0500","category":"WSD","fcstDate":"20220212","fcstTime":"0600","fcstValue":"3.4","nx":55,"ny":127}]},"pageNo":1,"numOfRows":5,"totalCount":809}}}
+"""
+
 class ForecastTests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -18,19 +22,23 @@ class ForecastTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func test_날씨_데이터() {
+        do {
+            let data = mockData.data(using: .utf8)!
+            let result = try? JSONDecoder().decode(APIResult.self, from: data)
+            
+            XCTAssertTrue(result != nil)
+            XCTAssertTrue(result?.response.header.code == "00")
+            XCTAssertTrue(result?.response.header.message == "NORMAL_SERVICE")
+            
+            XCTAssertTrue(result?.response.body.pageNo == 1)
+            XCTAssertTrue(result?.response.body.numberOfRows == 5)
+            XCTAssertTrue(result?.response.body.totalCount == 809)
+            
+            XCTAssertTrue(result?.response.body.items.list.count == 5)
+            XCTAssertTrue(result?.response.body.items.list[0].category == "TMP")
+        } catch {
+            print(error)
         }
     }
-
 }
