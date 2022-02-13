@@ -20,6 +20,7 @@
 		589EC9DB27B939600052ED30 /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9DA27B939600052ED30 /* DailyWeather.swift */; };
 		589EC9DD27B93A2B0052ED30 /* DailyWeather+APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9DC27B93A2B0052ED30 /* DailyWeather+APIResponse.swift */; };
 		589EC9DF27B944370052ED30 /* ForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9DE27B944370052ED30 /* ForecastUseCase.swift */; };
+		589EC9E127B949EA0052ED30 /* NetworkForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9E027B949EA0052ED30 /* NetworkForecastUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		589EC9DA27B939600052ED30 /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
 		589EC9DC27B93A2B0052ED30 /* DailyWeather+APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyWeather+APIResponse.swift"; sourceTree = "<group>"; };
 		589EC9DE27B944370052ED30 /* ForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastUseCase.swift; sourceTree = "<group>"; };
+		589EC9E027B949EA0052ED30 /* NetworkForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkForecastUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +109,12 @@
 		589EC9A527B7E8040052ED30 /* Forecast */ = {
 			isa = PBXGroup;
 			children = (
-				589EC9D927B939370052ED30 /* Domain */,
 				589EC9B427B7E8060052ED30 /* Info.plist */,
 				589EC9A627B7E8040052ED30 /* AppDelegate.swift */,
-				589EC9A827B7E8040052ED30 /* SceneDelegate.swift */,
 				589EC9AA27B7E8040052ED30 /* ViewController.swift */,
+				589EC9A827B7E8040052ED30 /* SceneDelegate.swift */,
 				589EC9AF27B7E8060052ED30 /* Assets.xcassets */,
+				589EC9D927B939370052ED30 /* Domain */,
 				589EC9B127B7E8060052ED30 /* LaunchScreen.storyboard */,
 				589EC9AC27B7E8040052ED30 /* Main.storyboard */,
 				589EC9D627B7EE420052ED30 /* Network */,
@@ -142,6 +144,7 @@
 			children = (
 				589EC9D727B7EE570052ED30 /* APIResult.swift */,
 				589EC9DC27B93A2B0052ED30 /* DailyWeather+APIResponse.swift */,
+				589EC9E027B949EA0052ED30 /* NetworkForecastUseCase.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				589EC9DF27B944370052ED30 /* ForecastUseCase.swift in Sources */,
+				589EC9E127B949EA0052ED30 /* NetworkForecastUseCase.swift in Sources */,
 				589EC9DD27B93A2B0052ED30 /* DailyWeather+APIResponse.swift in Sources */,
 				589EC9DB27B939600052ED30 /* DailyWeather.swift in Sources */,
 				589EC9AB27B7E8040052ED30 /* ViewController.swift in Sources */,
