@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		589EC9A727B7E8040052ED30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9A627B7E8040052ED30 /* AppDelegate.swift */; };
 		589EC9A927B7E8040052ED30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9A827B7E8040052ED30 /* SceneDelegate.swift */; };
-		589EC9AB27B7E8040052ED30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9AA27B7E8040052ED30 /* ViewController.swift */; };
+		589EC9AB27B7E8040052ED30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9AA27B7E8040052ED30 /* MainViewController.swift */; };
 		589EC9AE27B7E8040052ED30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589EC9AC27B7E8040052ED30 /* Main.storyboard */; };
 		589EC9B027B7E8060052ED30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589EC9AF27B7E8060052ED30 /* Assets.xcassets */; };
 		589EC9B327B7E8060052ED30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589EC9B127B7E8060052ED30 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,7 @@
 		589EC9DD27B93A2B0052ED30 /* DailyWeather+APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9DC27B93A2B0052ED30 /* DailyWeather+APIResponse.swift */; };
 		589EC9DF27B944370052ED30 /* ForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9DE27B944370052ED30 /* ForecastUseCase.swift */; };
 		589EC9E127B949EA0052ED30 /* NetworkForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9E027B949EA0052ED30 /* NetworkForecastUseCase.swift */; };
+		589EC9E327BA8C760052ED30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589EC9E227BA8C760052ED30 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		589EC9A327B7E8040052ED30 /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589EC9A627B7E8040052ED30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		589EC9A827B7E8040052ED30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		589EC9AA27B7E8040052ED30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		589EC9AA27B7E8040052ED30 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		589EC9AD27B7E8040052ED30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		589EC9AF27B7E8060052ED30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		589EC9B227B7E8060052ED30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		589EC9DC27B93A2B0052ED30 /* DailyWeather+APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyWeather+APIResponse.swift"; sourceTree = "<group>"; };
 		589EC9DE27B944370052ED30 /* ForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastUseCase.swift; sourceTree = "<group>"; };
 		589EC9E027B949EA0052ED30 /* NetworkForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkForecastUseCase.swift; sourceTree = "<group>"; };
+		589EC9E227BA8C760052ED30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +113,10 @@
 			children = (
 				589EC9B427B7E8060052ED30 /* Info.plist */,
 				589EC9A627B7E8040052ED30 /* AppDelegate.swift */,
-				589EC9AA27B7E8040052ED30 /* ViewController.swift */,
+				589EC9AA27B7E8040052ED30 /* MainViewController.swift */,
 				589EC9A827B7E8040052ED30 /* SceneDelegate.swift */,
 				589EC9AF27B7E8060052ED30 /* Assets.xcassets */,
+				589EC9E227BA8C760052ED30 /* Images.xcassets */,
 				589EC9D927B939370052ED30 /* Domain */,
 				589EC9B127B7E8060052ED30 /* LaunchScreen.storyboard */,
 				589EC9AC27B7E8040052ED30 /* Main.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				589EC9B327B7E8060052ED30 /* LaunchScreen.storyboard in Resources */,
+				589EC9E327BA8C760052ED30 /* Images.xcassets in Resources */,
 				589EC9B027B7E8060052ED30 /* Assets.xcassets in Resources */,
 				589EC9AE27B7E8040052ED30 /* Main.storyboard in Resources */,
 			);
@@ -293,7 +297,7 @@
 				589EC9E127B949EA0052ED30 /* NetworkForecastUseCase.swift in Sources */,
 				589EC9DD27B93A2B0052ED30 /* DailyWeather+APIResponse.swift in Sources */,
 				589EC9DB27B939600052ED30 /* DailyWeather.swift in Sources */,
-				589EC9AB27B7E8040052ED30 /* ViewController.swift in Sources */,
+				589EC9AB27B7E8040052ED30 /* MainViewController.swift in Sources */,
 				589EC9A727B7E8040052ED30 /* AppDelegate.swift in Sources */,
 				589EC9A927B7E8040052ED30 /* SceneDelegate.swift in Sources */,
 				589EC9D827B7EE570052ED30 /* APIResult.swift in Sources */,

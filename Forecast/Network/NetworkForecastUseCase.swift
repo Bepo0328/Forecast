@@ -13,13 +13,16 @@ enum NetworkError: Error {
 
 final class NetworkForecastUseCase: ForecastUseCase {
     func requestForecast(at date: Date, completion: @escaping ((Result<DailyWeather, Error>) -> ())) {
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd"
         
         var components = URLComponents(string: "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst")
         
+        let serviceKey = "your api key"
+        
         components?.queryItems = [
-            URLQueryItem(name: "ServiceKey", value: "your api key"),
+            URLQueryItem(name: "ServiceKey", value: serviceKey),
             URLQueryItem(name: "numOfRows", value: "100"),
             URLQueryItem(name: "dataType", value: "JSON"),
             URLQueryItem(name: "base_date", value: dateFormatter.string(from: date)),
@@ -28,14 +31,17 @@ final class NetworkForecastUseCase: ForecastUseCase {
             URLQueryItem(name: "ny", value: "1")
         ]
         
+        let localVariable = components
+        components?.percentEncodedQuery = localVariable?.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        
+        if let url = components?.url {
+            print("url : \(url)")
+        }
+        
         var request = URLRequest(url: (components!.url)!)
         
         request.httpMethod = "GET"
         request.timeoutInterval = 10
-        
-        if let url = components?.url {
-            print("url : \(url.absoluteURL)")
-        }
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
             if let error = error {
@@ -57,7 +63,7 @@ final class NetworkForecastUseCase: ForecastUseCase {
                 let weather = try DailyWeather(result: result, now: date)
                 
                 DispatchQueue.main.async {
-                    completion(.success(weather))
+                    completion(.success(weather!))
                 }
             } catch {
                 DispatchQueue.main.async {
