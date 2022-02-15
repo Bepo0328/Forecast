@@ -15,9 +15,9 @@ enum Sky {
 }
 
 struct DailyTemperature {
-    let current: Double
-    let low: Double
-    let high: Double
+    let current: Double?
+    let low: Double?
+    let high: Double?
 }
 
 struct DailyWeather {

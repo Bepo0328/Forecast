@@ -49,8 +49,8 @@ class MainViewController: UIViewController {
     func updateForecast(_ data: DailyWeather?) {
         if let data = data {
             self.iconView.image = data.sky.image
-            self.temperatureLabel.text = data.temerature.current.asTemperature()
-            self.lowHighTemperatureLabel.text = "최고 \(data.temerature.high.asTemperature()) / 최저 \(data.temerature.low.asTemperature()) "
+            self.temperatureLabel.text = data.temerature.current?.asTemperature()
+            self.lowHighTemperatureLabel.text = "최고 \(data.temerature.high?.asTemperature() ?? "-") / 최저 \(data.temerature.low?.asTemperature() ?? "-") "
         } else {
             self.iconView.image = nil
             self.temperatureLabel.text = "-"

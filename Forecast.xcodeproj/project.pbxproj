@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58652CAF27BB32CE00A16828 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58652CAE27BB32CE00A16828 /* WidgetKit.framework */; };
+		58652CB127BB32CE00A16828 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58652CB027BB32CE00A16828 /* SwiftUI.framework */; };
+		58652CB427BB32CF00A16828 /* Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58652CB327BB32CF00A16828 /* Widgets.swift */; };
+		58652CB727BB32D400A16828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58652CB627BB32D400A16828 /* Assets.xcassets */; };
+		58652CB927BB32D400A16828 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 58652CB527BB32CF00A16828 /* Widgets.intentdefinition */; };
+		58652CBA27BB32D400A16828 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 58652CB527BB32CF00A16828 /* Widgets.intentdefinition */; };
+		58652CBD27BB32D400A16828 /* WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 58652CAC27BB32CE00A16828 /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		58652CC227BB330A00A16828 /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9DA27B939600052ED30 /* DailyWeather.swift */; };
+		58652CC327BB331000A16828 /* ForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9DE27B944370052ED30 /* ForecastUseCase.swift */; };
+		58652CC427BB331600A16828 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9D727B7EE570052ED30 /* APIResult.swift */; };
+		58652CC527BB331C00A16828 /* DailyWeather+APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9DC27B93A2B0052ED30 /* DailyWeather+APIResponse.swift */; };
+		58652CC627BB331E00A16828 /* NetworkForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9E027B949EA0052ED30 /* NetworkForecastUseCase.swift */; };
+		58652CC727BB361400A16828 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589EC9E227BA8C760052ED30 /* Images.xcassets */; };
 		589EC9A727B7E8040052ED30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9A627B7E8040052ED30 /* AppDelegate.swift */; };
 		589EC9A927B7E8040052ED30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9A827B7E8040052ED30 /* SceneDelegate.swift */; };
 		589EC9AB27B7E8040052ED30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC9AA27B7E8040052ED30 /* MainViewController.swift */; };
@@ -25,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		58652CBB27BB32D400A16828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 589EC99B27B7E8040052ED30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58652CAB27BB32CE00A16828;
+			remoteInfo = WidgetsExtension;
+		};
 		589EC9BA27B7E8070052ED30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 589EC99B27B7E8040052ED30 /* Project object */;
@@ -41,7 +61,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		58652CBE27BB32D400A16828 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				58652CBD27BB32D400A16828 /* WidgetsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		58652CAC27BB32CE00A16828 /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		58652CAE27BB32CE00A16828 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		58652CB027BB32CE00A16828 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		58652CB327BB32CF00A16828 /* Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets.swift; sourceTree = "<group>"; };
+		58652CB527BB32CF00A16828 /* Widgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Widgets.intentdefinition; sourceTree = "<group>"; };
+		58652CB627BB32D400A16828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58652CB827BB32D400A16828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589EC9A327B7E8040052ED30 /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589EC9A627B7E8040052ED30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		589EC9A827B7E8040052ED30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +105,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		58652CA927BB32CE00A16828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58652CB127BB32CE00A16828 /* SwiftUI.framework in Frameworks */,
+				58652CAF27BB32CE00A16828 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		589EC9A027B7E8040052ED30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,12 +138,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58652CAD27BB32CE00A16828 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58652CAE27BB32CE00A16828 /* WidgetKit.framework */,
+				58652CB027BB32CE00A16828 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58652CB227BB32CF00A16828 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				58652CB327BB32CF00A16828 /* Widgets.swift */,
+				58652CB527BB32CF00A16828 /* Widgets.intentdefinition */,
+				58652CB627BB32D400A16828 /* Assets.xcassets */,
+				58652CB827BB32D400A16828 /* Info.plist */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
 		589EC99A27B7E8040052ED30 = {
 			isa = PBXGroup;
 			children = (
 				589EC9A527B7E8040052ED30 /* Forecast */,
 				589EC9BC27B7E8070052ED30 /* ForecastTests */,
 				589EC9C627B7E8070052ED30 /* ForecastUITests */,
+				58652CB227BB32CF00A16828 /* Widgets */,
+				58652CAD27BB32CE00A16828 /* Frameworks */,
 				589EC9A427B7E8040052ED30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +176,7 @@
 				589EC9A327B7E8040052ED30 /* Forecast.app */,
 				589EC9B927B7E8070052ED30 /* ForecastTests.xctest */,
 				589EC9C327B7E8070052ED30 /* ForecastUITests.xctest */,
+				58652CAC27BB32CE00A16828 /* WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +237,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		58652CAB27BB32CE00A16828 /* WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58652CC127BB32D400A16828 /* Build configuration list for PBXNativeTarget "WidgetsExtension" */;
+			buildPhases = (
+				58652CA827BB32CE00A16828 /* Sources */,
+				58652CA927BB32CE00A16828 /* Frameworks */,
+				58652CAA27BB32CE00A16828 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetsExtension;
+			productName = WidgetsExtension;
+			productReference = 58652CAC27BB32CE00A16828 /* WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		589EC9A227B7E8040052ED30 /* Forecast */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 589EC9CD27B7E8070052ED30 /* Build configuration list for PBXNativeTarget "Forecast" */;
@@ -171,10 +261,12 @@
 				589EC99F27B7E8040052ED30 /* Sources */,
 				589EC9A027B7E8040052ED30 /* Frameworks */,
 				589EC9A127B7E8040052ED30 /* Resources */,
+				58652CBE27BB32D400A16828 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				58652CBC27BB32D400A16828 /* PBXTargetDependency */,
 			);
 			name = Forecast;
 			productName = Forecast;
@@ -227,6 +319,9 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					58652CAB27BB32CE00A16828 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					589EC9A227B7E8040052ED30 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -256,11 +351,21 @@
 				589EC9A227B7E8040052ED30 /* Forecast */,
 				589EC9B827B7E8070052ED30 /* ForecastTests */,
 				589EC9C227B7E8070052ED30 /* ForecastUITests */,
+				58652CAB27BB32CE00A16828 /* WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		58652CAA27BB32CE00A16828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58652CB727BB32D400A16828 /* Assets.xcassets in Resources */,
+				58652CC727BB361400A16828 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		589EC9A127B7E8040052ED30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,11 +394,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		58652CA827BB32CE00A16828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58652CC527BB331C00A16828 /* DailyWeather+APIResponse.swift in Sources */,
+				58652CC327BB331000A16828 /* ForecastUseCase.swift in Sources */,
+				58652CC427BB331600A16828 /* APIResult.swift in Sources */,
+				58652CC627BB331E00A16828 /* NetworkForecastUseCase.swift in Sources */,
+				58652CB927BB32D400A16828 /* Widgets.intentdefinition in Sources */,
+				58652CB427BB32CF00A16828 /* Widgets.swift in Sources */,
+				58652CC227BB330A00A16828 /* DailyWeather.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		589EC99F27B7E8040052ED30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				589EC9DF27B944370052ED30 /* ForecastUseCase.swift in Sources */,
+				58652CBA27BB32D400A16828 /* Widgets.intentdefinition in Sources */,
 				589EC9E127B949EA0052ED30 /* NetworkForecastUseCase.swift in Sources */,
 				589EC9DD27B93A2B0052ED30 /* DailyWeather+APIResponse.swift in Sources */,
 				589EC9DB27B939600052ED30 /* DailyWeather.swift in Sources */,
@@ -324,6 +444,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		58652CBC27BB32D400A16828 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58652CAB27BB32CE00A16828 /* WidgetsExtension */;
+			targetProxy = 58652CBB27BB32D400A16828 /* PBXContainerItemProxy */;
+		};
 		589EC9BB27B7E8070052ED30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 589EC9A227B7E8040052ED30 /* Forecast */;
@@ -356,6 +481,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		58652CBF27BB32D400A16828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LGTX2WK5L4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.bepo.forecast.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58652CC027BB32D400A16828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LGTX2WK5L4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.bepo.forecast.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		589EC9CB27B7E8070052ED30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -475,6 +654,7 @@
 		589EC9CE27B7E8070052ED30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,12 +669,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.bepo.Forecast;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.bepo.forecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -505,6 +686,7 @@
 		589EC9CF27B7E8070052ED30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -519,12 +701,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.bepo.Forecast;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.bepo.forecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -611,6 +794,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		58652CC127BB32D400A16828 /* Build configuration list for PBXNativeTarget "WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58652CBF27BB32D400A16828 /* Debug */,
+				58652CC027BB32D400A16828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		589EC99E27B7E8040052ED30 /* Build configuration list for PBXProject "Forecast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
